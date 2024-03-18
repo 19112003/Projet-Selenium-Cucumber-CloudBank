@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="1" name="Failed suite [TestCloudBankSelenium]" junit="false" annotations="JDK" data-provider-thread-count="10">
+  <test name="com.testCloudBank.selenium.tests.test1(failed)" junit="false" annotations="JDK">
+    <classes>
+      <class name="com.testCloudBank.selenium.tests.test1">
+        <methods>
+          <include name="setUp"/>
+          <include name="CreationFournisseur"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

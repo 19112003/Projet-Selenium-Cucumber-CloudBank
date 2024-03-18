@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.testCloudBank.selenium.tests.test1" failures="0" tests="2" time="81.226" errors="0">
+  <properties/>
+  <testcase name="CreationFournisseur" time="31.304" classname="com.testCloudBank.selenium.tests.test1"/>
+  <testcase name="login" time="40.334" classname="com.testCloudBank.selenium.tests.test1"/>
+</testsuite>

@@ -3,10 +3,16 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CreationFournisseurPage {
 
 	WebDriver driver;
+	
+	public CreationFournisseurPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 			
 				/******* WEBELEMENTS *******/
 		
@@ -44,6 +50,9 @@ public class CreationFournisseurPage {
 
 	@FindBy(name = "capaciteJuridique.libelle")
 	WebElement forme_sociale;
+	
+	@FindBy(name = "capaciteJuridique.libelle")
+	private WebElement getForme_sociale;
 
 	@FindBy(name = "secteurActivite.libelle")
 	WebElement categorie;
@@ -149,6 +158,7 @@ public class CreationFournisseurPage {
 	
 	
 	
+	
 
 				/******* METHODES *******/
 	
@@ -168,15 +178,27 @@ public class CreationFournisseurPage {
 	public void enterCode(String Code) {
 		code.sendKeys(Code);
 	}
+	
+	public WebElement getCode() {
+	    return code;
+	}
 
 	// Champ Compte
 	public void enterCompte(String Compte) {
 		compte.sendKeys(Compte);
 	}
+	
+	public WebElement getCompte() {
+	    return compte;
+	}
 
 	// Champ Pays
 	public void enterPays(String Pays) {
 		pays.sendKeys(Pays);
+	}
+	
+	public WebElement getPays() {
+	    return pays;
 	}
 
 	// Champ Ville
@@ -188,6 +210,10 @@ public class CreationFournisseurPage {
 	public void enterTelephone(String Telephone) {
 		telephone.sendKeys(Telephone);
 	}
+	
+	public WebElement getTelephone() {
+	    return telephone;
+	}
 
 	// Champ Adresse
 	public void enterAdresse(String Adresse) {
@@ -197,6 +223,10 @@ public class CreationFournisseurPage {
 	// Champ Capital
 	public void enterCapital(String Capital) {
 		capital.sendKeys(Capital);
+	}
+	
+	public WebElement getCapital() {
+	    return capital;
 	}
 
 	// Champ BP
@@ -208,10 +238,18 @@ public class CreationFournisseurPage {
 	public void enterForme_sociale(String Forme_sociale) {
 		forme_sociale.sendKeys(Forme_sociale);
 	}
+	
+	public WebElement getForme_sociale() {
+	    return forme_sociale;
+	}
 
 	// Champ Categorie
 	public void enterCategorie(String Categorie) {
 		categorie.sendKeys(Categorie);
+	}
+	
+	public WebElement getCategorie() {
+	    return categorie;
 	}
 
 	// Bouton Dirigeant 1
@@ -319,6 +357,10 @@ public class CreationFournisseurPage {
 	// Champ filtre
 	public void enterFiltre(String Filtre) {
 		filtre.sendKeys(Filtre);
+	}
+	
+	public WebElement getFiltre() {
+	    return filtre;
 	}
 
 	// Bouton validation du compte

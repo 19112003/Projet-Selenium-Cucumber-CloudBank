@@ -1,4 +1,4 @@
-package StepDefinitions;
+package runner;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue = {"StepDefinitions"},
 		tags = "@login or @createProvider",
 		monochrome = true,
-		plugin = {"pretty", "html:target/HtmlReports/cucumber_reports.html"}
+		plugin = {"json:target/cucumber.json"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests{

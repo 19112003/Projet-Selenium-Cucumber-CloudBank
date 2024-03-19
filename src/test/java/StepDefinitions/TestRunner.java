@@ -3,6 +3,7 @@ package StepDefinitions;
 import java.io.IOException;
 import java.time.Duration;
 
+import managers.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeSuite;
@@ -24,22 +25,17 @@ public class TestRunner extends AbstractTestNGCucumberTests{
 	
 	@BeforeSuite
 	public void setUp() throws IOException {
-		
-		driver = new ChromeDriver();
-		   
-	    driver.manage().window().maximize();
-	  //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(35));
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
-	    
-	    //driver.get("http://192.168.1.201:5303/cloudbank/index.bank");
-	    driver.get("http://154.126.170.127:5303/cloudbank/index.bank");
-		
+
+		WebDriverSingleton.getInstance();
+		//driver.get("http://192.168.1.201:5303/cloudbank/index.bank");
+		driver.get("http://154.126.170.127:5303/cloudbank/index.bank");
+
 	}
 	
 	/**@AfterSuite
 	   
     public void TeardownTest() { 
-        TestBase.driver.quit(); 
+        WebDriverSingleton.destroy();
     } **/
 
 }

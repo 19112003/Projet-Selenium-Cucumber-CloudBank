@@ -1,12 +1,13 @@
 package StepDefinitions;
 
+import managers.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.*;
 import pages.LoginPage;
 public class LoginSteps {
 	
-	WebDriver driver;
+	WebDriver driver = WebDriverSingleton.getInstance();
 	private LoginPage login;
 	
 	@Given("user is on login page")

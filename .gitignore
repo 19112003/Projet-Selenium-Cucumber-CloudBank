@@ -1,0 +1,27 @@
+# Ignorer les fichiers et répertoires spécifiques générés par IntelliJ IDEA
+.idea/
+*.iml
+
+# Ignorer les répertoires générés par Maven
+target/
+
+# Ignorer les fichiers de sortie des tests
+test-output/
+TestCloudBankSelenium/
+
+# Ignorer les fichiers de configuration d'Eclipse
+.settings/
+.classpath
+.project
+
+# Ignorer les fichiers spécifiques de l'éditeur
+/workspace.xml
+
+# Ignorer les fichiers générés par l'éditeur HTTP
+/httpRequests/
+
+# Ignorer les fichiers spécifiques de stockage local des sources de données
+/dataSources/
+/dataSources.local.xml
+
+

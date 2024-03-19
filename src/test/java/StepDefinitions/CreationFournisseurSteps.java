@@ -187,39 +187,81 @@ public class CreationFournisseurSteps {
 				/**Duplicate provider**/
 	
 	@When("user searches for the provider to duplicate")
-	public void user_searches_for_the_provider_to_duplicate() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_searches_for_the_provider_to_duplicate() throws InterruptedException {
+		System.out.println("Inside Step - user searches for the provider to duplicate");
+	    
+		//Aller sur la page de duplication
+  		elements.clickOnBtnDuplicationForm();
+  		
+  		//Recherche du Fournisseur à dupliquer
+  		elements.getCode().clear();
+  		elements.enterCode("*");
+  		elements.getCode().sendKeys(Keys.ENTER);
+  	
+  		elements.enterFiltre("0003");
+  		Thread.sleep(3000);
+  		elements.getFiltre().sendKeys(Keys.TAB);
+  		elements.clickOnBtnValidationCompte();
+  		Thread.sleep(2000);
 	}
 	
 	
-				/**View provider**/
+				/**View provider **/
 	
 	@When("user searches for the provider to view")
-	public void user_searches_for_the_provider_to_view() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_searches_for_the_provider_to_view() throws InterruptedException {
+		System.out.println("Inside Step - user searches for the provider to view");
+	
+		//Aller sur la page d'interrogation
+		elements.clickOnBtnInterrogationForm();;
+		
+		//Recherche du Fournisseur à visualiser
+		elements.enterCode("*");
+		elements.getCode().sendKeys(Keys.ENTER);
+	
+		elements.enterFiltre("0014");
+		Thread.sleep(3000);
+		elements.getFiltre().sendKeys(Keys.TAB);
+		elements.clickOnBtnValidationCompte();
+		Thread.sleep(2000);
+	
 	}	
 	
 	@And("view the informations of the provider")
-	public void view_the_informations_of_the_provider() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void view_the_informations_of_the_provider() throws InterruptedException {
+		System.out.println("Inside Step - view the informations of the provider");
+		Thread.sleep(5000);
 	}
 	
 	
-			/**Delete provider**/
+			/**Delete provider
+			 * @throws InterruptedException **/
 	
 	@When("user searches for the provider to delete")
-	public void user_searches_for_the_provider_to_delete() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_searches_for_the_provider_to_delete() throws InterruptedException {
+		System.out.println("Inside Step - user searches for the provider to delete");
+		//Aller sur la page de suppression
+		elements.clickOnBtnSuppressionForm();;
+		
+		//Recherche du Fournisseur à supprimer
+		elements.enterCode("*");
+		elements.getCode().sendKeys(Keys.ENTER);
+	
+		elements.enterFiltre("0003");
+		Thread.sleep(3000);
+		elements.getFiltre().sendKeys(Keys.TAB);
+		elements.clickOnBtnValidationCompte();
+		Thread.sleep(2000);
 	}
 
 	@And("validate the deletion of the provider")
-	public void validate_the_deletion_of_the_provider() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void validate_the_deletion_of_the_provider() throws InterruptedException {
+		System.out.println("Inside Step - validate the deletion of the provider");
+
+		elements.clickOnBtnValidationForm();
+		elements.clickOnBtnOuiExitForm();
+		Thread.sleep(2000);
+		elements.clickOnBtnOK();
 	}
 	
 	

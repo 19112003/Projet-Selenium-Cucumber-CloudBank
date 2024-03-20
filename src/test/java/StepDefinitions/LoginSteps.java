@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.*;
 import manager.WebDriverSingleton;
+import pages.BoutonsNavigation;
 import pages.LoginPage;
 public class LoginSteps {
 	
@@ -35,13 +36,23 @@ public class LoginSteps {
 	public void clicks_on_validate_button() {
 		System.out.println("Inside Step - clicks on validate button");
 		
-		//login.clickOnBtnValidation();
+		login.clickOnBtnValidation();
 	}
 	
 
-	@Then("user is navigated to the home page")
-	public void user_is_navigated_to_the_home_page() {
+	@Then("user is navigated to the home page and logout")
+	public void user_is_navigated_to_the_home_page() throws InterruptedException {
+		BoutonsNavigation btnNav = new BoutonsNavigation(driver);
+		
 		System.out.println("Inside Step - user is navigated to the home page");
+		Thread.sleep(2000);
+		
+		try {
+            btnNav.clickOnBtnLogout(); 
+
+        } catch (Exception e) {
+            System.out.println("Bouton logout n'a pas été trouvé.");
+        }
 	} 
 
 }

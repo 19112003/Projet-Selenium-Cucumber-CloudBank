@@ -56,6 +56,13 @@ public class CreationFournisseurSteps {
             System.out.println("Creation fournisseur n'a pas été trouvé.");
         }
         
+        // Bref temps d'attente permettant aux éléments d'être chargés sur la page
+		 try {
+		     Thread.sleep(10000);
+		 } catch (InterruptedException e) {
+		     e.printStackTrace();
+		 }
+        
 	}
 	
 
@@ -68,6 +75,7 @@ public class CreationFournisseurSteps {
 		
 		//Remplissage du pays
 		elements.enterPays("Cameroun");
+		Thread.sleep(1000);
 		elements.getPays().sendKeys(Keys.ENTER);
 		
 		//Remplissage de la ville
@@ -97,8 +105,10 @@ public class CreationFournisseurSteps {
 		
 				/**Ajout de compte**/
 		 //Filtrage des comptes
+		
 		elements.enterCompte("*");
-		elements.getCompte().sendKeys(Keys.TAB);
+		Thread.sleep(1000);
+		elements.getCompte().sendKeys(Keys.ENTER);
 		
 		elements.enterFiltre("401000027");
 		Thread.sleep(5000);
@@ -140,18 +150,24 @@ public class CreationFournisseurSteps {
 	
 				/**Modify provider**/
 
+	@Given("user goes to the page of modifications")
+	public void user_goes_to_the_page_of_modifications() {
+	   System.out.println("Inside Step - user goes to the page of modifications");
+	 //Aller sur la page de modification
+	 	elements.clickOnBtnModificationForm();
+	}
+	
 	@When("user searches for the provider to modify")
 	public void user_searches_for_the_provider_to_modify() throws InterruptedException {
 		System.out.println("Inside Step - user searches for the provider to modify");
 	
-		//Aller sur la page de modification
-		elements.clickOnBtnModificationForm();
+		
 		
 		//Recherche du Fournisseur à modifier
 		elements.enterCode("*");
 		elements.getCode().sendKeys(Keys.ENTER);
 	
-		elements.enterFiltre("0003");
+		elements.enterFiltre("0004");
 		Thread.sleep(3000);
 		elements.getFiltre().sendKeys(Keys.TAB);
 		elements.clickOnBtnValidationCompte();
@@ -187,19 +203,25 @@ public class CreationFournisseurSteps {
 	
 				/**Duplicate provider**/
 	
+	@Given("user goes to the page of duplications")
+	public void user_goes_to_the_page_of_duplications() {
+	   System.out.println("Inside Step - user goes to the page of duplications");
+	 //Aller sur la page de duplication
+ 		elements.clickOnBtnDuplicationForm();
+	}
+	
 	@When("user searches for the provider to duplicate")
 	public void user_searches_for_the_provider_to_duplicate() throws InterruptedException {
 		System.out.println("Inside Step - user searches for the provider to duplicate");
 	    
-		//Aller sur la page de duplication
-  		elements.clickOnBtnDuplicationForm();
+		
   		
   		//Recherche du Fournisseur à dupliquer
   		elements.getCode().clear();
   		elements.enterCode("*");
   		elements.getCode().sendKeys(Keys.ENTER);
   	
-  		elements.enterFiltre("0003");
+  		elements.enterFiltre("0004");
   		Thread.sleep(3000);
   		elements.getFiltre().sendKeys(Keys.TAB);
   		elements.clickOnBtnValidationCompte();
@@ -209,18 +231,25 @@ public class CreationFournisseurSteps {
 	
 				/**View provider **/
 	
+	@Given("user goes to the page of interrogations")
+	public void user_goes_to_the_page_of_interrogations() {
+	   System.out.println("Inside Step - user goes to the page of interrogations");
+	 //Aller sur la page d'interrogation
+	  elements.clickOnBtnInterrogationForm();
+	}
+	
+	
 	@When("user searches for the provider to view")
 	public void user_searches_for_the_provider_to_view() throws InterruptedException {
 		System.out.println("Inside Step - user searches for the provider to view");
 	
-		//Aller sur la page d'interrogation
-		elements.clickOnBtnInterrogationForm();;
+		
 		
 		//Recherche du Fournisseur à visualiser
 		elements.enterCode("*");
 		elements.getCode().sendKeys(Keys.ENTER);
 	
-		elements.enterFiltre("0014");
+		elements.enterFiltre("0022");
 		Thread.sleep(3000);
 		elements.getFiltre().sendKeys(Keys.TAB);
 		elements.clickOnBtnValidationCompte();
@@ -238,17 +267,23 @@ public class CreationFournisseurSteps {
 			/**Delete provider
 			 * @throws InterruptedException **/
 	
+	@Given("user goes to the page of deletion")
+	public void user_goes_to_the_page_of_deletion() {
+	   System.out.println("Inside Step - user goes to the page of deletion");
+	 //Aller sur la page de suppression
+	 		elements.clickOnBtnSuppressionForm();;
+	}
+	
 	@When("user searches for the provider to delete")
 	public void user_searches_for_the_provider_to_delete() throws InterruptedException {
 		System.out.println("Inside Step - user searches for the provider to delete");
-		//Aller sur la page de suppression
-		elements.clickOnBtnSuppressionForm();;
+		
 		
 		//Recherche du Fournisseur à supprimer
 		elements.enterCode("*");
 		elements.getCode().sendKeys(Keys.ENTER);
 	
-		elements.enterFiltre("0003");
+		elements.enterFiltre("0023");
 		Thread.sleep(3000);
 		elements.getFiltre().sendKeys(Keys.TAB);
 		elements.clickOnBtnValidationCompte();

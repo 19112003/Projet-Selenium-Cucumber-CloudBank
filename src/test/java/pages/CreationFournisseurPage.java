@@ -87,7 +87,7 @@ public class CreationFournisseurPage {
 	@FindBy(id = "btCreationGen")
 	WebElement btnCreationForm;
 
-	@FindBy(id = "tModificationGen")
+	@FindBy(id = "btModificationGen")
 	WebElement btnModificationForm;
 
 	@FindBy(id = "btDupplicationGen")

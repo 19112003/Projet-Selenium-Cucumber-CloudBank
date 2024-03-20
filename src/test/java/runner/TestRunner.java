@@ -10,11 +10,10 @@ import io.cucumber.testng.CucumberOptions;
 import manager.WebDriverSingleton;
 
 @CucumberOptions(
-		features = "src/test/resources/Features", 
+		features = "src/test/resources/Features/ProviderForm.feature", 
 		glue = {"StepDefinitions"},
-		tags = "@login",
 		monochrome = true,
-		plugin = {"json:target/cucumber.json"}
+		plugin = {"pretty", "html:target/HtmlReports/cucumber_reports.html"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests{

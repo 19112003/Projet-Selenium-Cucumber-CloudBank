@@ -13,6 +13,12 @@ public class BoutonsNavigation {
 	
 	WebDriver driver;
 	
+	public BoutonsNavigation(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
 	@FindBy(id = "btnAdministration")
 	WebElement btnAdministration;
 	
@@ -31,10 +37,18 @@ public class BoutonsNavigation {
 	@FindBy(css = "#x-auto-71 > tbody > tr:nth-child(2) > td.x-btn-mc > em > button")
 	WebElement btnLogout;
 	
-	public BoutonsNavigation(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
+	
+				/** Boites de dialogue **/
+
+	@FindBy(css = ".x-window-plain.x-window.x-window-dlg .x-toolbar-left-row  .x-toolbar-cell:first-child button")
+	WebElement btnOuiExitForm;
+
+	@FindBy(css = ".x-window-plain.x-window.x-window-dlg .x-toolbar-left-row  .x-toolbar-cell:last-child button")
+	WebElement btnNonExitForm;
+
+	@FindBy(css = ".x-window-plain.x-window.x-window-dlg button")
+	WebElement btnOK;
+	
 	
 	
 	
@@ -69,5 +83,23 @@ public class BoutonsNavigation {
 	    wait.until(ExpectedConditions.elementToBeClickable(btnLogout)).click();
 	}
 	
+	
+			/** Boites de dialogue **/
+
+	// Bouton OUI
+	public void clickOnBtnOuiExitForm() {
+		btnOuiExitForm.click();
+	}
+
+	// Bouton NON
+	public void clickOnBtnNonExitForm() {
+		btnNonExitForm.click();
+	}
+
+	// Bouton OK
+	public void clickOnBtnOK() {
+		btnOK.click();
+	}
+
 
 }

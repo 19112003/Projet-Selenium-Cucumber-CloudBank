@@ -14,7 +14,7 @@ Feature: feature to test the provider form functionalities
   Scenario: Validate creation provider is working
     Given cloudbank is open
     And user goes to the creation provider form
-    When user fill the form
+    When user fill the provider form
     And validate the informations
     Then user returns to the empty form
 

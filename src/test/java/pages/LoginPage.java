@@ -9,6 +9,14 @@ public class LoginPage  {
 	
 	WebDriver driver;
 	
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	
 	@FindBy(id = "x-auto-11")
 	WebElement identifier;
 	
@@ -19,10 +27,6 @@ public class LoginPage  {
 	WebElement btnValidation;
 	
 	
-	public LoginPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 	
 	
 	public void enterId(String id) {

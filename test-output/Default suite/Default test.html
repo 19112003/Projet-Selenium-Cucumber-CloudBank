@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 20 18:03:00 WAT 2024</td>
+<td>Started on:</td><td>Wed Mar 27 09:57:00 WAT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>76 seconds (76039 ms)</td>
+<tr><td>Total time:</td><td>71 seconds (71691 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,107 +77,201 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate view provider is working", "feature to test the provider form functionalities"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user can do something else&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;user can do something else&quot;)
-public void user_can_do_something_else() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btInterrogationGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 106px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 232). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.714}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btInterrogationGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1991537156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1991537156'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;user can do something else&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;user can do something else&quot;)
-public void user_can_do_something_else() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnInterrogationForm(CreationFournisseurPage.java:303)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_interrogations(CreationFournisseurSteps.java:244)
+	at ✽.user goes to the page of interrogations(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:38)
+</pre></div><a href='#' onClick='toggleBox("stack-trace971415207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace971415207'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btInterrogationGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 106px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 232). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.714}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btInterrogationGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnInterrogationForm(CreationFournisseurPage.java:303)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_interrogations(CreationFournisseurSteps.java:244)
+	at ✽.user goes to the page of interrogations(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:38)
 </pre></div></td>
-<td>10</td>
-<td>runner.TestRunner@53045c6c</td></tr>
+<td>1</td>
+<td>runner.TestRunner@3ba987b8</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate duplicate provider is working", "feature to test the provider form functionalities"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btDupplicationGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 74px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 200). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.713}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btDupplicationGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnDuplicationForm(CreationFournisseurPage.java:298)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_duplications(CreationFournisseurSteps.java:216)
+	at ✽.user goes to the page of duplications(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1336418989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1336418989'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btDupplicationGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 74px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 200). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.713}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btDupplicationGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnDuplicationForm(CreationFournisseurPage.java:298)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_duplications(CreationFournisseurSteps.java:216)
+	at ✽.user goes to the page of duplications(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:31)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestRunner@3ba987b8</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate modify provider is working", "feature to test the provider form functionalities"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon&quot; role=&quot;presentation&quot; id=&quot;btnSauvegarderProvider&quot; style=&quot;width: 75px; margin-right: 5px;&quot;&gt;...&lt;/table&gt; is not clickable at point (973, 508). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.712}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btnSauvegarderProvider]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnSauvegarder(CreationFournisseurPage.java:255)
+	at stepDefinitions.CreationFournisseurSteps.save_the_informations(CreationFournisseurSteps.java:203)
+	at ✽.save the informations(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1709043290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1709043290'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon&quot; role=&quot;presentation&quot; id=&quot;btnSauvegarderProvider&quot; style=&quot;width: 75px; margin-right: 5px;&quot;&gt;...&lt;/table&gt; is not clickable at point (973, 508). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.712}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btnSauvegarderProvider]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pages.CreationFournisseurPage.clickOnBtnSauvegarder(CreationFournisseurPage.java:255)
+	at stepDefinitions.CreationFournisseurSteps.save_the_informations(CreationFournisseurSteps.java:203)
+	at ✽.save the informations(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:26)
+</pre></div></td>
+<td>9</td>
+<td>runner.TestRunner@3ba987b8</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate delete provider is working", "feature to test the provider form functionalities"</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btSuppressionGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 138px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 273). Other element would receive the click: &lt;div id=&quot;x-auto-67&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1553; width: 1536px; height: 742px; position: absolute;&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=122.0.6261.129)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btSuppressionGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 138px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 264). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28279e811f8b389cad6f3a32bd8cf8fc, clickElement {id=f.BE49F1537C24429B3C691A3E6A046D40.d.69DB0051BDCB8272E57447C59769253A.e.800}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51822/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (28279e811f8b389cad6f3a32bd8cf8fc)] -&gt; id: btSuppressionGen]
-Session ID: 28279e811f8b389cad6f3a32bd8cf8fc
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.715}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btSuppressionGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -194,19 +288,19 @@ Session ID: 28279e811f8b389cad6f3a32bd8cf8fc
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-	at pages.CreationFournisseurPage.clickOnBtnSuppressionForm(CreationFournisseurPage.java:320)
-	at StepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_deletion(CreationFournisseurSteps.java:274)
+	at pages.CreationFournisseurPage.clickOnBtnSuppressionForm(CreationFournisseurPage.java:308)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_deletion(CreationFournisseurSteps.java:280)
 	at ✽.user goes to the page of deletion(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:45)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1038002783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1038002783'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btSuppressionGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 138px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 273). Other element would receive the click: &lt;div id=&quot;x-auto-67&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1553; width: 1536px; height: 742px; position: absolute;&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=122.0.6261.129)
+</pre></div><a href='#' onClick='toggleBox("stack-trace18928637", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace18928637'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;table cellspacing=&quot;0&quot; class=&quot;x-btn  x-btn-noicon x-box-item x-btn-focus&quot; role=&quot;presentation&quot; id=&quot;btSuppressionGen&quot; style=&quot;width: 68px; margin: 0px; left: 10px; top: 138px;&quot;&gt;...&lt;/table&gt; is not clickable at point (1232, 264). Other element would receive the click: &lt;div id=&quot;x-auto-259&quot; class=&quot; x-modal &quot; style=&quot;z-index: 1282; width: 1536px; height: 724px; position: absolute;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=123.0.6312.86)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28279e811f8b389cad6f3a32bd8cf8fc, clickElement {id=f.BE49F1537C24429B3C691A3E6A046D40.d.69DB0051BDCB8272E57447C59769253A.e.800}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51822/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (28279e811f8b389cad6f3a32bd8cf8fc)] -&gt; id: btSuppressionGen]
-Session ID: 28279e811f8b389cad6f3a32bd8cf8fc
+Command: [76e22c4b1cf17532d5659289d3d182c5, clickElement {id=f.1FCB3B143052B9AB461315FBC75C64E2.d.52460B59BBB2E80A0E20A502402EE18E.e.715}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56645/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76e22c4b1cf17532d5659289d3d182c5)] -&gt; id: btSuppressionGen]
+Session ID: 76e22c4b1cf17532d5659289d3d182c5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -223,12 +317,12 @@ Session ID: 28279e811f8b389cad6f3a32bd8cf8fc
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-	at pages.CreationFournisseurPage.clickOnBtnSuppressionForm(CreationFournisseurPage.java:320)
-	at StepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_deletion(CreationFournisseurSteps.java:274)
+	at pages.CreationFournisseurPage.clickOnBtnSuppressionForm(CreationFournisseurPage.java:308)
+	at stepDefinitions.CreationFournisseurSteps.user_goes_to_the_page_of_deletion(CreationFournisseurSteps.java:280)
 	at ✽.user goes to the page of deletion(file:///D:/inet/Projet-Selenium-Cucumber-CloudBank-version1/src/test/resources/Features/ProviderForm.feature:45)
 </pre></div></td>
 <td>1</td>
-<td>runner.TestRunner@53045c6c</td></tr>
+<td>runner.TestRunner@3ba987b8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -239,25 +333,15 @@ Session ID: 28279e811f8b389cad6f3a32bd8cf8fc
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate creation provider is working", "feature to test the provider form functionalities"</td>
-<td></td>
-<td>45</td>
-<td>runner.TestRunner@53045c6c</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate duplicate provider is working", "feature to test the provider form functionalities"</td>
-<td></td>
-<td>7</td>
-<td>runner.TestRunner@53045c6c</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate modify provider is working", "feature to test the provider form functionalities"</td>
-<td></td>
-<td>9</td>
-<td>runner.TestRunner@53045c6c</td></tr>
-<tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is successful with valid credentials", "feature to test the provider form functionalities"</td>
 <td></td>
-<td>1</td>
-<td>runner.TestRunner@53045c6c</td></tr>
+<td>5</td>
+<td>runner.TestRunner@3ba987b8</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate creation provider is working", "feature to test the provider form functionalities"</td>
+<td></td>
+<td>50</td>
+<td>runner.TestRunner@3ba987b8</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>CloudBankTestCucumberSelenium</groupId>
   <artifactId>CloudBankTestCucumberSelenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
    <properties>
+   		<java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -40,12 +41,76 @@
 	    <artifactId>selenium-java</artifactId>
 	    <version>4.17.0</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+	<dependency>
+	    <groupId>io.qameta.allure</groupId>
+	    <artifactId>allure-cucumber7-jvm</artifactId>
+	    <version>2.26.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<!-- 	<dependency> -->
+<!-- 	    <groupId>javax.mail</groupId> -->
+<!-- 	    <artifactId>mail</artifactId> -->
+<!-- 	    <version>1.4.7</version> -->
+<!-- 	</dependency> -->
+	
+	<dependency>
+	    <groupId>org.simplejavamail</groupId>
+	    <artifactId>simple-java-mail</artifactId>
+	    <version>8.8.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>1.6.2</version>
+	</dependency>
+	
+<!-- 	<dependency> -->
+<!-- 	    <groupId>jakarta.activation</groupId> -->
+<!-- 	    <artifactId>jakarta.activation-api</artifactId> -->
+<!-- 	    <version>2.0.1</version> -->
+<!-- 	</dependency> -->
+			
   
   </dependencies>
   
   
     <build>
         <plugins>
+   
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
+   			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>first-execution</id>
+						<phase>install</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<classpathScope>test</classpathScope>
+							<mainClass>Utils.EmailWithAttachment.java</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+      			
+        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

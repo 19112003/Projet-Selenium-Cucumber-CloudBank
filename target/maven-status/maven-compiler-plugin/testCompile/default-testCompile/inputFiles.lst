@@ -1,5 +1,10 @@
-D:\inet\WorkspaceTests\src\test\java\pages\LoginPage.java
-D:\inet\WorkspaceTests\src\test\java\pages\CreationFournisseurPage.java
-D:\inet\WorkspaceTests\src\test\java\StepDefinitions\LoginSteps.java
-D:\inet\WorkspaceTests\src\test\java\StepDefinitions\TestRunner.java
-D:\inet\WorkspaceTests\src\test\java\StepDefinitions\CreationFournisseurSteps.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\runner\TestRunner.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\stepDefinitions\LoginSteps.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\stepDefinitions\CreationCompteGestionSteps.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\pages\CreateCompteGestionPage.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\stepDefinitions\CreationFournisseurSteps.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\utils\EmailWithAttachment.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\pages\CreationFournisseurPage.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\pages\LoginPage.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\pages\BoutonsNavigation.java
+D:\inet\Projet-Selenium-Cucumber-CloudBank-version1\src\test\java\utils\GenerateReport.java

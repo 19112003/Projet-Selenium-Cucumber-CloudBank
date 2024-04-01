@@ -1,0 +1,11 @@
+utils\EmailWithAttachment.class
+stepDefinitions\LoginSteps.class
+pages\LoginPage.class
+pages\CreationFournisseurPage.class
+utils\GenerateReport.class
+pages\BoutonsNavigation.class
+stepDefinitions\CreationCompteGestionSteps.class
+pages\CreateCompteGestionPage.class
+utils\refreshProject.class
+stepDefinitions\CreationFournisseurSteps.class
+runner\TestRunner.class

@@ -1,10 +1,10 @@
 # Projet-Selenium-Cucumber-CloudBank
 Automatisation des tests fonctionnels sur CloudBank avec Selenium Cucumber
 
-*PRE-REQUIS
+*PRE-REQUIS (Afin d'éviter toute incompatibilité avec les outils)
 
 - Disponibilité du lien CloudBank
-- Un navigateur
+- Un navigateur Chrome à jour
 - Connexion internet
 - Java 1.8
 - Eclipse IDE for Java Developpers 2021-03

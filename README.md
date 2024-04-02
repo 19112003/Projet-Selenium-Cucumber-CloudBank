@@ -7,8 +7,9 @@ Automatisation des tests fonctionnels sur CloudBank avec Selenium Cucumber
 - Un navigateur
 - Connexion internet
 - Java 1.8
-- Un IDE
+- Eclipse IDE for Java Developpers 2021-03
 
+  
 *INSTALLATION: Confère pom.xml
 
 - Installation Selenium 4.17
